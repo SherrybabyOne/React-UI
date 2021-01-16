@@ -36,6 +36,34 @@ Sass支持混合指令（Mixin Directives）
 @import "../components/Button/style";
 ```
 
+在Sass当中使用变量，需要使用`#{}`包裹起来，代表一个占位符，在使用时会用变量的内容做对应的替换。
+
+### Sass Each
+对于频繁的操作，`Sass`提出了`Each`的解决方案：
+```css
+// 首先定义一个含有key、val的map
+$theme-colors: 
+(
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+// 进行遍历操作
+// #代表占位，实际内容会被变量替换
+@each $key, $val in $theme-colors {
+  .icon-#{$key} {
+    color: $val;;
+  }
+}
+
+```
+
 ## Button组件
 一个组件有自定制的属性，原生属性也要支持，某些组件还不同的扩展（比如Button组件，返回一个button或a标签）,此时怎样优雅地管理这些属性定义组件的Props类型就成了问题
 
@@ -154,4 +182,6 @@ const renderChildren = () => {
   })
 }
 ```
+
+## 
 
