@@ -15,9 +15,9 @@ const App: React.FC = () => {
         <Icon icon='arrow-down' theme='primary' size='10x' />
         <Menu
           defaultIndex='0'
-          onSelect={index => console.log(index)}
-          mode='vertical'
+          // onSelect={index => console.log(index)}
           defaultOpenSubMenus={['2']}
+          // mode='vertical'
         >
           <MenuItem>cool link</MenuItem>
           <MenuItem disabled>cool link2</MenuItem>

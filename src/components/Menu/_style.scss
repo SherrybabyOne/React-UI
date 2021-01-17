@@ -50,7 +50,6 @@
     }
   }
   .viking-submenu {
-    display: none;
     list-style:none;
     padding-left: 0;
     white-space: nowrap;
@@ -64,9 +63,6 @@
         color: $menu-item-active-color !important;
       }
     }
-  }
-  .viking-submenu.menu-opened {
-    display: block;
   }
 }
 .menu-horizontal {
