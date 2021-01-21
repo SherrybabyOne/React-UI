@@ -8,6 +8,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
+    "@storybook/preset-create-react-app": "^3.1.5",
     "@svgr/webpack": "5.4.0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -51,7 +52,7 @@
     "jest-resolve": "26.6.0",
     "jest-watch-typeahead": "0.6.1",
     "mini-css-extract-plugin": "0.11.3",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "5.0.4",
     "pnp-webpack-plugin": "1.6.4",
     "postcss-flexbugs-fixes": "4.2.1",
@@ -84,7 +85,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": [
@@ -108,5 +111,15 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.1.14",
+    "@storybook/addon-essentials": "^6.1.14",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.1.14",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^6.1.14",
+    "@types/storybook__addon-info": "^5.2.3",
+    "react-docgen-typescript-loader": "^3.7.2"
   }
 }
