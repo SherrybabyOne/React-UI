@@ -185,6 +185,18 @@ const renderChildren = () => {
 }
 ```
 
+## Input
+React组件分为受控组件和非受控组件
+```javascript
+// 非受控写法
+<Input defaultValue=' />
+
+// 受控写法
+const [value, setValue] = useState('');
+// ...
+<Input value={value} />
+```
+
 ## Storybook
 
 ### 自动生成代码展示、注释
@@ -193,6 +205,13 @@ const renderChildren = () => {
 
 注释遵循**JSDoc**的标准
 
+## TypeScript
+工具范性
+### Omit
+忽略接口的某些属性：
+```javascript
+type Foo = Omit<{name: string, age: number}, 'name'> // -> { age: number }
+```
 
 ## JavaScript模块
 ### 什么是模块：
