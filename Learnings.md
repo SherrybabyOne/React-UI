@@ -187,7 +187,11 @@ const renderChildren = () => {
 
 ## Storybook
 
+### 自动生成代码展示、注释
+- @storybook/addon-info
+- react-docgen-typescript-loader
 
+注释遵循**JSDoc**的标准
 
 
 ## JavaScript模块
