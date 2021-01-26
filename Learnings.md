@@ -197,6 +197,29 @@ const [value, setValue] = useState('');
 <Input value={value} />
 ```
 
+## React
+一个函数防抖`debounce`，使用hook实现：
+```javascript
+import { useState, useEffect } from 'react';
+
+function useDebounce(value: any, deley = 300) {
+  const [deboundeValue, setDebounceValue] = useState(value);
+  useEffect(() => {
+    const handler = window.setTimeout(() => {
+      setDebounceValue(value);
+    }, deley);
+
+    return () => {
+      clearTimeout(handler);
+    }
+  }, [value, deley]);
+
+  return deboundeValue;
+}
+
+export default useDebounce;
+```
+
 ## Storybook
 
 ### 自动生成代码展示、注释
